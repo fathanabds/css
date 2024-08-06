@@ -1,0 +1,24 @@
+div {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+}
+
+.satu {
+	background-color: darkred;
+/*	untuk mengatur tumpukan elemen non-static, 
+	semakin besar semakin paling depan/terluar*/
+	z-index: 1;
+}
+
+.dua {
+	background-color: greenyellow;
+	top: 100px;
+	left: 100px;
+}
+
+.tiga {
+	background-color: blueviolet;
+	top: 200px;
+	left: 200px;
+}

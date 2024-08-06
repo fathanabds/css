@@ -1,0 +1,17 @@
+div {
+	width: 600px;
+	margin: 10px auto;
+/*	auto sesuaikan size width*/
+	box-sizing: border-box;
+/*	background-color: pink;*/
+}
+
+.satu {
+	background-color: royalblue;
+	padding: 10px;
+	border: 5px solid red;
+}
+
+.dua {
+	background-color: lightgreen;
+}

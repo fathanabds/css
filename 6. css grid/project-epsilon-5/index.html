@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">Fathan Abdul</h2>
+                <p class="sub-heading">Tour & Travel</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 250K</h4>
+                <p class="item">Surabaya</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 350K</h4>
+                <p class="item">Semarang</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">Tour & Travel</div>
+            <ul class="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+
+        <section class="services">
+            <div class="service">
+                <div class="icon">🌏</div>
+                <h3>Asia</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ipsa. Placeat optio consectetur est quo.</p>
+            </div>
+            <div class="service">
+                <div class="icon">🌎</div>
+                <h3>Amerika</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ipsa. Placeat optio consectetur est quo.</p>
+            </div>
+            <div class="service">
+                <div class="icon">🌍</div>
+                <h3>Eropa</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ipsa. Placeat optio consectetur est quo.</p>
+            </div>
+            <div class="service">
+                <div class="icon">🌍</div>
+                <h3>Afrika</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ipsa. Placeat optio consectetur est quo.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <img src="gal/1.jpg" alt="">
+            <img src="gal/2.jpg" alt="">
+            <img src="gal/3.jpg" alt="">
+            <img src="gal/4.jpg" alt="">
+            <img src="gal/5.jpg" alt="">
+            <img src="gal/6.jpg" alt="">
+            <img src="gal/7.jpg" alt="">
+            <img src="gal/8.jpg" alt="">
+            <img src="gal/9.jpg" alt="">
+            <img src="gal/10.jpg" alt="">
+        </section>
+    </div>
+
+<script>
+    const burger = document.querySelector('.menu-toggle input');
+    const menu = document.querySelector('nav ul');
+
+    burger.addEventListener('click',function(){
+        menu.classList.toggle('slide');
+    });
+</script>
+</body>
+</html>

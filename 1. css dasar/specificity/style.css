@@ -1,0 +1,8 @@
+/*pembobotan: inline > id > class > element, kemudian dijumlahkan u/ hasil pembobotannya*/
+ul#sarapan li {
+	color: green;
+}
+
+ul#sarapan li.favorit {
+	color: red;
+}

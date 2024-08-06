@@ -1,0 +1,18 @@
+div {
+	width: 500px;
+	height: 300px;
+	background-color: coral;
+	margin: 20px auto;
+	text-align: justify;
+/*	note: padding menambah ukuran elemen*/
+	padding: 20px;
+/*	border: width style (solid/dotted/dashed
+	/double) color;*/
+/*	note: border menambah ukuran elemen*/
+	border: 3px solid black;
+/*	border pada sisi tertentu*/
+/*	border-top/left/right/bottom*/
+}
+
+/*total dimensi/ukuran elemen =
+width/height+padding+border*/

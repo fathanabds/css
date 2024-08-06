@@ -1,0 +1,31 @@
+/*	a {
+	background-color: pink;
+	width: 200px;
+	height: 100px;
+	agar bisa diubah ukurannya, menggunakan:
+	display: inline-block;
+}*/
+
+/*img {
+	untuk menghilangkan elemen
+	display: none;
+}*/
+
+.main {
+	background-color: pink;
+/*			mengatur PxL block div main*/
+	width: 700px;
+	height: 400px;
+}
+
+.main h2 {
+	background-color: green;
+}
+
+.navigation li {
+	display: inline;
+	background-color: pink;
+/*			width dan height tidak bisa diatur karena elemen inline (ga ngaruh)*/
+	width: 200px;
+	height: 100px;
+}

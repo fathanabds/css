@@ -1,0 +1,22 @@
+div {
+	width: 200px;
+	height: 200px;
+}
+
+.satu {
+	background-color: darkred;
+}
+
+.dua {
+	background-color: greenyellow;
+/*	untuk mengubah posisi menjadi relative thdp
+	posisi awal*/
+	position: relative;
+/*	untuk mengubah posisi, top/left/bottom/right*/
+	top: 30px;
+	left: 50px;
+}
+
+.tiga {
+	background-color: blueviolet;
+}

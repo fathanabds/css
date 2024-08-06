@@ -1,0 +1,324 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* STYLE */
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    margin: 50px;
+    font-family: "Oswald", sans-serif;
+}
+
+
+/* CONTAINER */
+.container {
+	display: grid;
+	gap: 10px;
+}
+
+
+/* HEADER */
+.header {
+	display: grid;
+	grid-template-areas: "hero hero feature-1" "hero hero feature-2";
+}
+
+.hero {
+	grid-area: hero;
+	background-image: url(img/hero.jpg);
+	min-height: 300px;
+	background-size: cover;
+	padding: 50px;
+}
+
+.hero h2, .hero p {
+	display: none;
+}
+
+.features {
+	display: grid;
+	/* justify-content: center;
+	align-content: center; */
+	place-content: center;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.feature-1 {
+	grid-area: feature-1;
+	background-image: url(img/1.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.feature-2 {
+	grid-area: feature-2;
+	background-image: url(img/2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.features .price {
+	font-size: 3em;
+	font-weight: 200;
+}
+
+
+/* NAVIGASI */
+.menu {
+	order: -1;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu .brand {
+	font-size: 1.3em;
+	color: #333;
+}
+
+.menu ul {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 5px;
+}
+
+.menu a {
+	text-decoration: none;
+	display: block;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+	z-index: 2;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -10px;
+    top: -6px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    transition: .5s;
+}
+
+/* HAMBURGER ANIMATION */
+.menu-toggle span:nth-child(2) {
+    /* ubah poros rotate menjadi x,y = 0,0 (di ujung kiri span) */
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    /* ubah poros rotate menjadi x,y = 0,0 (di ujung kiri span) */
+    transform-origin: 0 100%;
+}
+
+/* ketika input di-check, cari sibling span yang: anak kedua */
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: white;
+}
+
+/* ketika input di-check, cari sibling span yang: anak terakhir/keempat */
+.menu-toggle input:checked ~ span:last-child {
+    transform: rotate(-45deg);
+    background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+
+/* SERVICES */
+.services {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.service {
+	background-color: white;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.service .icon {
+	font-size: 3em;
+}
+
+.service h3 {
+	font-size: 1.5em;
+}
+
+.service p {
+	font-weight: 200;
+	letter-spacing: 1px;
+	font-size: 0.8em;
+}
+
+
+/* GALLERY */
+.gallery {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 5px;
+}
+
+.gallery h2 {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media screen and (max-width: 1024px) {
+	.hero h2, .hero p {
+		display: inherit;
+		background-color: black;
+		color: white;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+	}
+
+	.menu {
+		order: inherit;
+		grid-template-columns: 1fr;
+	}
+
+	.menu .brand {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		order: -1;
+		justify-items: end;
+	}
+
+	.menu ul {
+		display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: black;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .menu ul.slide {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		grid-template-areas: "hero" "feature-1" "feature-2";
+	}
+
+	body {
+		margin: 15px;
+	}
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .tempat-kotak{
+            height: 500px;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            animation: perbesar 2s infinite alternate forwards ;
+        }
+
+        /* animation: name(wajib) duration timing-function delay iteration-count(angka/infinite) direction (normal/reverse/alternate/alternate-reverse) fill-mode(none/forwards/backwards/both) play-state(running/paused); */
+        /* .kotak:hover {
+            animation: perbesar 2s 3 alternate forwards ;
+        } */
+
+        @keyframes perbesar {
+            50% {
+                width: 500px;
+                height: 200px;
+            }
+            
+            100% {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="tempat-kotak">
+        <div class="kotak"></div>
+    </section>
+    <section>
+        <button id="btnpause">pause</button>
+        <button id="btnplay">play</button>
+    </section>
+
+<script>
+    const kotak = document.querySelector('.kotak')
+    const btnpause = document.querySelector('#btnpause')
+    const btnplay = document.querySelector('#btnplay')
+
+    btnpause.addEventListener('click', function() {
+        kotak.style.animationPlayState = 'paused'
+    });
+
+    btnplay.addEventListener('click', function () {
+        kotak.style.animationPlayState = 'running'
+    });
+</script>
+</body>
+</html>

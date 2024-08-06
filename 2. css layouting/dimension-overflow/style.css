@@ -1,0 +1,14 @@
+.satu {
+	background-color: pink;
+	width: 500px;
+	height: 200px;
+/*	overflow: visible/auto/hidden/scroll;*/
+/*	overflow: auto;*/
+}
+
+.dua {
+	background-color: green;
+	width: 50%;
+	height: 50%;
+/*	overflow: auto;*/
+}

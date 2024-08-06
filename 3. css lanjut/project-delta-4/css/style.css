@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* FONT */
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* STYLE */
+
+body {
+    /* font: size/line-height ffamily */
+    font: 18px/36px 'montserrat', sans-serif;
+    background-color: rgb(228, 225, 225);
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+.container {
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.gallery li, .gallery figure img, .gallery li figcaption {
+    border-radius: 50%;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    border: 5px solid rgb(82, 81, 81);
+    float: left;
+    margin-right: 20.5px;
+    position: relative;
+}
+
+.gallery li figcaption {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(212, 210, 210, 0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transform: scale(0);
+    transition: 300ms ;
+}
+
+.gallery li a:hover figcaption{
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+/* clear float agar parent tidak collapse */
+.clear {
+    clear: both;
+}
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 999;
+    transition: .5s;
+    transform: scale(0);
+    padding: 75px;
+}
+
+.overlay:target {
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1);
+    text-align: center;
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.overlay:target img {
+    animation: zoomFadeIn .5s;
+}
+
+.overlay .close {  
+    width: 32px;
+    height: 32px;
+    top: 25px;
+    left: 50%;
+    margin-left: -15px;
+    background-image: url('../img/close.png');
+}
+
+.overlay .close:hover {
+    background-color: white;
+}
+
+.overlay:target .close, .overlay:target .nav {
+    animation: slideDownFadeIn .5s .5s forwards;
+}
+
+.overlay .nav, .overlay .close {
+    position: absolute;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.overlay .nav {
+    top: 280px;
+}
+
+.overlay .next {
+    width: 64px;
+    height: 64px;
+    margin-left: 20px;
+    background-image: url('../img/next.png');
+}
+
+.overlay .prev {
+    left: 390px;
+    width: 64px;
+    height: 64px;
+    background-image: url('../img/prev.png');
+}
+
+.overlay .nav:hover {
+    background-color: black;
+}
+
+/* animasi img */
+@keyframes zoomFadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* animasi tombol */
+@keyframes slideDownFadeIn {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

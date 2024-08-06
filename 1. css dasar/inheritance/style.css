@@ -1,0 +1,9 @@
+body {
+	color: green;
+	font-family: arial;
+}
+
+/*inheritance color u/ anchor*/
+a {
+	color: inherit;
+}

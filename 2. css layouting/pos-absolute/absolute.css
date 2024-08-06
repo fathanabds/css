@@ -1,0 +1,35 @@
+div {
+	margin: auto;
+}
+
+.container {
+	width: 600px;
+	height: 650px;
+	border: 10px solid green;
+/*	agar absolute position .dua relatif
+	thdp .container, position diubah jadi relative*/
+	position: relative;
+}
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: indianred;
+}
+
+.dua {
+	width: 200px;
+	height: 200px;
+	background-color: lawngreen;
+/*	mengatur posisi absolute (relative 
+	thdp parent), top/left/bottom/right*/
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.tiga {
+	width: 200px;
+	height: 200px;
+	background-color: cadetblue;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Galeri Lightbox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Lightbox Gallery</h1>
+
+    <div class="container">
+        <ul class="gallery">
+            <li>
+                <a href="#gambar1">
+                    <figure>
+                        <img src="img/thumb/1.jpg" alt="Person Standing between Walls with Sculptures">
+                        <figcaption>Person</figcaption>
+                    </figure>
+                </a>
+
+                <div class="overlay" id="gambar1">
+                    <a href="#" class="close"></a>
+                    <a href="#gambar4" class="nav prev"></a>
+                    <img src="img/full/1.jpg" alt="Person Standing between Walls with Sculptures">
+                    <a href="#gambar2" class="nav next"></a>
+                </div>
+            </li>
+            <li>
+                <a href="#gambar2">
+                    <figure>
+                        <img src="img/thumb/2.jpg" alt="A bouquet of flowers on a table with a card">
+                        <figcaption>Flowers</figcaption>
+                    </figure>
+                </a>
+
+                <div class="overlay" id="gambar2">
+                    <a href="#" class="close"></a>
+                    <a href="#gambar1" class="nav prev"></a>
+                    <img src="img/full/2.jpg" alt="A bouquet of flowers on a table with a card">
+                    <a href="#gambar3" class="nav next"></a>
+                </div>
+            </li>
+            <li>
+                <a href="#gambar3">
+                    <figure>
+                        <img src="img/thumb/3.jpg" alt="Blonde Woman on a Balcony in Sunlight">
+                        <figcaption>Woman</figcaption>
+                    </figure>
+                </a>
+
+                <div class="overlay" id="gambar3">
+                    <a href="#" class="close"></a>
+                    <a href="#gambar2" class="nav prev"></a>
+                    <img src="img/full/3.jpg" alt="Blonde Woman on a Balcony in Sunlight">
+                    <a href="#gambar4" class="nav next"></a>
+                </div>
+            </li>
+            <li>
+                <a href="#gambar4">
+                    <figure>
+                        <img src="img/thumb/4.jpg" alt="Plate and Cup on Night Stand near Bed">
+                        <figcaption>Plate & Cup</figcaption>
+                    </figure>
+                </a>
+
+                <div class="overlay" id="gambar4">
+                    <a href="#" class="close"></a>
+                    <a href="#gambar3" class="nav prev"></a>
+                    <img src="img/full/4.jpg" alt="Plate and Cup on Night Stand near Bed">
+                    <a href="#gambar1" class="nav next"></a>
+                    <!-- <a href="#gambar3" class="nav prev"></a> -->
+                </div>
+            </li>
+
+            <div class="clear"></div>
+        </ul>
+    </div>
+</body>
+</html>

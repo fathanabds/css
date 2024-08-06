@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform and Transition</title>
+    <style>
+        .container {
+            width: innerWindow;
+        }
+
+        /* transform: 
+        SKALA: scale(angka), scale(angkaX,angkaY) scaleX(angka), scaleY(angka), 
+        ROTASI: rotate(deg), rotateX(deg), rotateY(deg), 
+        CONDONG: skew(deg), skewX(deg), skewY(deg), 
+        UBAH POSISI: translate(px), translate(Xpx,Ypx), translateX(px), translateY(px) */
+
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 50px auto 0;
+
+            /* transition diberikan di keadaan awal */
+            /* transition: property(opt) durasi(m/ms) fungsi(opt) delay(opt) */
+            transition: transform 2s ease-out;
+        }
+
+        .container:hover .kotak {
+            /* transform: scale(1,0.5); */
+            /* transform: rotate(180deg) rotateX(180deg) rotateY(180deg); */
+            /* transform: skewX(30deg); */
+            /* transform: translate(-25px, -25px); */
+            transform: scale(0.5) rotate(720deg);
+            background-color: salmon;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur pariatur deserunt ullam dicta, quam, perferendis, eum enim autem temporibus dolor incidunt fugiat quos nisi repellat omnis quia dolores recusandae consequatur.</p>
+    </div>
+    
+</body>
+</html>

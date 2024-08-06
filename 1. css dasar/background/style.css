@@ -1,0 +1,10 @@
+body {
+	background-image: url(gambar/bg1.png);
+/*	mengulang gambar secara horizontal (background-repeat: repeat-x), vertikal (repeat-y)*/
+/*	kalau hanya satu gambar: no-repeat, bisa mengatur posisi gambar: background-position: top/center/bottom 
+left/center/right*/
+/*	background-repeat: repeat-x;*/
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: lightblue;
+}

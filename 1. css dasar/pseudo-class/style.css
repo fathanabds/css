@@ -1,0 +1,67 @@
+/*pseudo link*/
+
+.hello:link {
+	color: orange;
+}
+
+.hello:hover {
+	color: green;
+	font-family: arial;
+	font-size: 20px;
+}
+
+.hello:active {
+	font-style: italic;
+}
+
+.hello:visited {
+	color: red;
+}
+
+
+/*pseudo child*/
+
+li:first-child a {
+	color: blue;
+}
+
+li:last-child a {
+	color: green;
+}
+
+li:nth-child(8) a {
+	color: grey;
+}
+
+/*+3 (3n), dst*/
+li:nth-child(3n) a {
+	color: coral;
+}
+
+/*+X mulai dari angka tertentu (Z) : (Xn+Z)*/
+/*co: +4 mulai dari 1*/
+li:nth-child(4n+1) a{
+	color: skyblue;
+}
+
+/*odd u/ anak ganjil, even u/ anak genap*/
+/*li:nth-child(odd) a{
+	color: skyblue;
+}*/
+
+/*menggabungkan pseudo child & link*/
+li:nth-child(odd) a:hover{
+	color: green;
+}
+
+/*pseudo posisi elemen*/
+
+/*elemen pertama pada tag tertentu*/
+p:first-of-type {
+	color: red;
+}
+
+/*elemen terakhir pada tag tertentu*/
+p:last-of-type {
+	color: green;
+}

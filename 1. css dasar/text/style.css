@@ -1,0 +1,23 @@
+h1 {
+	color: #7603ec;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: underline;
+/*	text decoration: overline */
+	text-transform: uppercase;
+}
+
+p {
+	color: rgb(6,57,112, 1.0);
+	text-align: justify;
+	text-indent: 100px;
+	text-decoration: line-through;
+	text-transform: capitalize;
+	letter-spacing: 5px;
+}
+
+a {
+	text-decoration: none;
+	text-transform: lowercase;
+	word-spacing: 5px;
+}

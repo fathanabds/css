@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+}
+
+
+/* latihan 1 */
+.container-satu {
+    display: flex;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-satu {
+    flex: 1;
+}
+
+.kolom-utama {
+    flex: 3;
+}
+
+.sidebar-dua {
+    flex: 1.5;
+}
+/* akhir latihan 1 */
+
+/* latihan 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu {
+    background-color: rgb(101, 101, 242);
+}
+
+.layanan.dua {
+    background-color: rgb(102, 243, 102);
+}
+
+.layanan.tiga {
+    background-color: rgb(243, 128, 128);
+}
+/* akhir latihan 2 */
+
+
+/* latihan 3 */
+.container-tiga {
+    display: flex;
+    max-width: 800px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 50%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+/* akhir latihan 3 */
+
+/* latihan 4 */
+.container-empat {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.card {
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+/* akhir latihan 4 */
+
+/* latihan 5 */
+.container-lima {
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.kotak {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.kotak span {
+    margin: auto;
+}
+
+/* responsive */
+@media (min-width: 600px){
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+
+    .container-empat {
+        display: flex;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    .card.besar {
+        transform: scale(1.12);
+    }
+}
